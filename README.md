@@ -1,2 +1,2 @@
 # MachineLearningUdacity
-Udacity Meachine Learning Course study
+Udacity Machine Learning Course study
