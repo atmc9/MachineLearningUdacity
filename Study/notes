@@ -1,0 +1,19 @@
+
+
+Machine Learning: Teaching computers to perform tasks from past experience(data).
+       Voice recognition, spam detection, fraud detection, stock market, self driving cars.
+
+Navie Bayes: Based on the probability of  success in the existing data, we can predict the new data.
+
+Gradient Descent: What is the better way to move our prediction line to reduce the error.
+      Linear regression - best line through the points
+      Logistic regression - minimize the sum of Error function for wrongly classified data
+      Super vector Machines - place the line that increases the minimum distance of points to the line.
+
+Neural Network: It is dividing the data into regions. Network of the decision chain.
+Kernel Method: dividing with a plane or coming up with a curve
+
+K-Mean clustering: Place the ClusterCenters randomly and find the distance to their closest points, move the Centers to have the less distance
+and follow the step to include the new points that are close to other centers and repeat it.
+
+Hierarchal Clustering: Here the distance of how far we  can go to include in a cluster, determines the number of clusters.
