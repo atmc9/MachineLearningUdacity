@@ -17,3 +17,35 @@ K-Mean clustering: Place the ClusterCenters randomly and find the distance to th
 and follow the step to include the new points that are close to other centers and repeat it.
 
 Hierarchal Clustering: Here the distance of how far we  can go to include in a cluster, determines the number of clusters.
+
+
+
+Metrics:
+    Confusion Matrix - TruePositives, TrueNegatives, FalsePositives, FalseNegatives
+    Accuracy - (Points that predicted as true) / (total true points), it is not always a good measure s it gives equal weightage in confusion matrix
+    Precision - ok with FalseNegatives. If I say positive it better be positive. Any FalsePositives is :O  (Finding Spam emails)
+    Recall - ok with FalsePositives. If I say negative it better be negative. Any FalseNegative is :O (Diagnosing sick people)
+    Precision is true column => TruePositive / (TruePositive + FalsePositive)
+    Recall is false column => TruePositive / (TruePositive + FalseNegative)
+    F1 score - Hormonic mean of Precision and Recall => 2 * Precision * Recall / (Precision + Recall)
+    F beta Score - (1+ N^2)Precision * Recall / (N^2 Precision + Recall)
+    Receiver Operator Characteristic Curve - Get (TruePositive, FalsePositive) points and the area under that curve is the metric for good split.
+    Regression metrics - Mean absolute error, Mean square error(MSE), R2 Score = 1 - MSE(Linear regression model) / MSE(Simple model)
+
+Types of errors:
+    Underfitting(error due to bias) - This over simplifies the solution and it also makes mistake on training set.
+    Overfitting(error due to variance) - The modal is too correct that it is more like memorizing, it does not do well with new data.
+    Both performs bad on testing data. Only good model performs well on testing data.
+
+    Model complexity Graph - Graph of errors plotted for training and testing data for different models.
+
+    Cross Validation: For making decisions between different models, we should not use testing data, we should use Cross Validation data.
+
+    K-fold cross validation: To best use our testing data for training, we can use K-fold method. Our data will be divided in to k-buckets
+        and each time a bucket will be the testing data and get the average of the results.
+
+    Learning Curves: Graph plotted on training data count, error value for multiple models. This helps in determining if the model is
+        under-fitting or over-fitting, good model
+
+
+Summary: We train the model using training data and compare the models using cross validation data and test the models using testing data.
