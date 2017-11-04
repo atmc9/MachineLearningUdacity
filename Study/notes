@@ -49,3 +49,226 @@ Types of errors:
 
 
 Summary: We train the model using training data and compare the models using cross validation data and test the models using testing data.
+
+
+
+Supervised Learning: Where the data is labeled examples, where we feed data to model about the success or failure.
+Examples: Neural Networks, ensemble learning, regression, classification. Self driving cars are example of supervised classification.
+
+Note: To determine if a problem can be solved using Supervised learning is if the data has labeled features.
+One things that cannot solve using supervised learning is, clustering. We don't know how may types we are looking for.
+
+-> Plotting the data on the graph using scattering helps in giving some information even before applying ML Algorithm.
+
+Regression: Mapping continuous inputs to outputs (data can be discrete or continues, regression talks about continuous input)
+Example: The height of the children regresses, there will be some noice where exception of being height than parents.
+
+    Usually the models will have errors mainly because of un-modeled influences.
+    We can have vector inputs for the housing problem with all features that are important.
+    Linear regression and Polynomial regression are done using :  Xw = Y the value w = (XT * X)^-1  * (XT * X) Y
+    Best constant in terms of squared error is mean.
+
+    1) Parametric Regression: Y = m2 X^2 + mX + b
+    2) K nearest neighbor(KNN): (data centric approach or intense based approach) - We keep the data until we need to query.
+        Suppose we get 3 nearest historical data points for this query and use them to estimate.
+    3) Kernel Regression: Main difference between kernel regression and KNN is in kernel, we weight the each data point based on
+    its distance to the query point.
+
+    Parametric vs non-parametric: the cannon ball distance can be best estimated using a parametric model, as it follows a well-defined trajectory(biased).
+    On the other hand, the behavior of honey bees can be hard to model mathematically. Therefore, a non-parametric approach would be more suitable(unbiased).
+    -> As we already know the form of equation, we aim at that bias
+    -> In parametric approach we don't need to store the original data, we cannot easily update the model as more data is gathered.
+    To update we need to rerun the algorithm. Then the training is slow, but querying is fast.
+    -> Non Parametric needs the data to be stored in the model, hard to apply for huge datasets. But new evidence can be added easily.
+    Training is fast, but querying is slow. Usually any complex model that does not follow a pattern like linear or quadratic will best solved by this.
+
+Continuous supervised learning: (If the output is continuous its is called continuos supervised learning.)
+Example: Predicting the weight of the person from the height.
+Note: If there is an order of outcomes where you can scale on low to heigh, it is continuous. If we dont have any order it is discrete.
+
+Types of errors we can have on regression:
+    error = actual net worth - predicted net worth
+    best regression minimizes the sum of squared errors.
+    In Linear Regression in Sklearn to find m and c in y = mx +c that minimizes the sum of squares is (Ordinary Least Squares, gradient descent)
+    There can be multiple lines to minimize the absolute error, where as only one line can minimize the squared errors.
+
+Classification vs Regression:
+
+        Property        Supervised Classification           Regression
+
+        Output type      Discrete (class labels)            Continuous(number)
+
+        What are you      Decision boundary                 "Best fit line"
+        trying to find
+
+        Evaluate            Accuracy                         "Sum of squares" or R^2
+
+Decision tree for OR function is Linear, vs XOR it is full binary tree (Which has 2^n - 1) nodes, this is exponential.
+Expressiveness: The number of decision trees possible with n -attributes boolean attributes with boolean output is
+(possible attribute combinations - 2^n) with gain 2 possible outputs. So it is => (2)^(2^n)
+
+ID3 algorithm: (A top down learning algorithm) uses best attribute
+Best attribute is having best Gain(S,A) = Entropy(S) - Sigma |Sv| / |S| * Entropy(Sv)
+Induction Bias: 1) Good splits at top of tree 2) Correct tree vs incorrect  3) Shorter trees
+Note: For discrete valued attributes it does not make sense to repeat the same attribute on a specific path.
+For continuos attributes it make sense, not the same question, but a different question.
+Pruning: On the model tree, by collapsing the leaves, how does it creates the error on the validation set.
+
+Modeling using Decision tree: Min-sample-split is used for fine tuning the model for better
+
+Entropy: Measure of impurity in bunch of examples. If we have an equal distribution, we will have maximum entropy as we have maximum impurity.
+Information Gain: Entropy of parent - [Weighted average] entropy of children.
+Decision tree will maximize the information gain.
+
+Note: While using Decision Tress we have to careful in picking the tuning parameters, it can easily overfit.
+    We need to find a stopping point after certain height of decision tree.
+
+
+Neural networks:
+
+Initial perception of artificial neural networks (perceptron): activation (Weighted sum of inputs) > threshold
+perceptron is always a linear equation, that forms half planes.
+And, OR, Not are all expressible using perceptron units.
+
+Xor can be formed by doing AND first (x1 AND x2), later do the OR of (x1 OR x2 OR x3)
+
+The weights of perceptron are (1, -2, 1) and threshold = 1
+
+The two rules used for finding weights are:
+    1) perception rule - generates thresholded outputs
+    2) gradient descent or delta rule  - generates un-thresholded outputs
+
+Perception Rule:     Wi = wi+ delta(wi)
+                    delta(wi) = learning rate(n)* (actual output y - current output y^) * Xi
+    If there is a linearly separable solution, it will find if that line exist in finite number of iterations.
+    algorithm stops when delta(wi) is zero. It only converges the linearly separable solutions.
+
+Gradient descent:    delta(wi) = n * (y -a) * xi
+                robust, converge local optimum
+We cannot use the difference of (y, y^) in gradient descent as it is not differentiable.
+To make it more smooth curve in the variation, we can use sigmoid
+
+Neural network: Network of sigmoid units that converts input to output using some middle layers.
+This mapping from input to output is differentiable means how any change of weights in the network will make the
+mapping of input to output.
+Back propagation: Computationally beneficial organization of the chain rule.
+
+Disadvantages of gradient decent: It can get stuck in local minimum.
+Other methods: momentum, higher order derivatives - looks at derivative of combination of weights (hamilton),
+                randomized optimization, penalty for complexity
+Restriction bias tells about representation power, set of hypothesis we consider.
+                                perceptron: half spaces
+                                Boolean: network of threshold-like units
+                                Continuos: If connected and no jumps - using single hidden layer
+                                Arbitrary: Stitch together - 2 layers
+                    Danger of overfitting as we can have any arbitrary networks.
+Preference biases: Algorithm selection of one representation over other
+            Gradient descent , how to set initial weights ?
+                - small set of random values - to avoids local minimum, variability of not stuck in if we run multiple times.
+                    We prefer small numbers means simpler complexity over complex
+            Occam's razor: entities should not be multiplied unnecessarily
+
+
+Support Vector Machines:  Maximizes distance to nearest point.  MARGIN -> robustness
+
+Optimization problem for finding max margins is a Quadratic problem.
+SVM is based on only subset of data.
+Mercer condition: It acts like a distance or like a similarity, our kernel function has to be a well behaved distance function,
+SVM decision boundary can also be non linear
+Kernel trick:  Take a non separable input say x, y and by using kernels get the x1, x2, x3, x4 as separable solutions.
+XT * y => K(X,Y) Domain Knowledge
+
+Parameter in machine learning: Kernel(linear, poly, sigmoid, rbf), C, gamma
+    C - Controls tradeoff between Smooth decision boundary and classifying training points correctly
+            more C value more the training data will fit, this could cause over fitting
+    gamma - defines how far the influence of a single training example reaches
+                        low values  - far (more smoother) - risk of under-fitting
+                        high values - low  (Jaggy curve) - risk of Overfitting
+SVM work well in complicated domains, where there is a clear margin of separation.
+They don't perform very well on large datasets as the training time will be in order of cubic to size data set.
+They don't work well if we have lots of data noice, so when classes are very overlapping you have to count independent evidence.
+In this scenario Naive Bayes classifier works well
+
+
+Instance based Learning: In all the above supervised learning techniques, we constructed a model function from our data
+    and through away all the data, if new predictions have to be made, we are just using that function to predict.
+    It is a lazy learning
+
+    In this method, we will store all the data points and if new data comes , we will lookup the data.
+        - positives: remembers, fast, simple
+        - negatives: no generalization, it overfits as it memorizes,
+        Among the k nearest neighbors, for getting the
+                    Classification: Mode of my nearest Yi values
+                    Regression: Mean of Yi
+Preference bias for KNN:
+                Locality - near points are similar  - thus the distance function matter a lot in defining that distance
+                Smoothness - averaging
+                All features matter equally
+
+Curse of Dimensionality in ML:
+    As the number of features or dimensions grows, the amount of data we need to generalize accurately grows exponentially.
+        - choice of distance function matters alot - d(x, q) = Euclidean, Manhattan (weighted), Mismatches,
+        - K = n, weighted average
+            -> Locally weighted regression: may be a weighted regression by picking few points based on distance
+Note: For picking K, distance function Domain knowledge matters.
+KNN can handle both classification or regression, locally weighted Regression. Domain knowledge matters a lot.
+
+
+Naive Bayes:
+
+The Gaussian NB
+It is called Naive Based, as it only looks for the frequency of the words, not considering the order of words.
+Bayesian Learning: Minimum Description length.
+The best hypothesis function is one that minimizes the mis classification error with less size of h.
+Basyan Networks:
+Note:   Factorial representation helps if we have more labels.
+
+Conditional Independence: P(X/ y,z) = P(X/Z)
+
+Belief Networks: (Bayes Nets, Bayesian Network, Graphical models)
+    If we have conditional independence, it will be not much complex. This Belief network can grow more exponential.
+    This is not a tree more like a graph.
+Joint Distribution:
+If we have the directed graph the topological order is used for dependency identification. The graph must be acyclic.
+The distribution does not hoes exponential here, only the nodes that depends on few parents will have the dependency order in
+O(2^parents)
+
+Approximate Inference: By sampling we can understand, why cant exact ? Exact : hard, approximate : faster
+Inference Rules:
+    Marginalization: P(X) = Sigma (P(X,Y))
+    Chain Rule: P(X,Y) = P(X) * P(Y/X)
+    Bayes Rule: P(Y/X) = P(X/Y) * P(Y) / P(X)
+
+Naive Bayes is cool:
+    Inference is cheap
+    Few Parameters
+    Estimate parameters with labeled data
+    Connects inferences with classification
+    Empirically Successful
+
+    On unseen attribute can spoil the whole.
+    Induction Bias: Smooth, all possible labels exist in average
+
+Bayes Network - Representation of joint distribution
+    Examples of using networks to compute probabilities
+    Sampling as a way to do approximate inference
+    In general, hard to do exact inference
+    Naive Bayes, (ASSUMING THE ATTRIBUTES ARE INDEPENDENT OF ONE ANOTHER) - link to classification
+      - tractible
+      - gold standard
+      - inference in any direction (missing attributes
+
+Ensemble learning - Boosting
+    Simple rules
+    combined
+   => Learn over subset of data -> generates a rule
+      Combine
+
+  => Bagging: Taking random subsets and combine by mean.
+  => Boosting: Done on Hardest examples, and do some kind of weighted Mean
+    + Error -> stays same when it gets to some level of training
+    + Confidence -> increases as more training happens, as margin of error will keep increasing.
+
+    - Agnostic of learner
+
+  Additional notes on boosting: https://storage.googleapis.com/supplemental_media/udacityu/367378584/Intro%20to%20Boosting.pdf

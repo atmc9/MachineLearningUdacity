@@ -18,6 +18,11 @@ df['label'] = df.label.map({'ham':0, 'spam':1})
 print(df.shape)
 print(df.head()) # returns (rows, columns)
 
+# version 2.x
+print "statement"
+print()
+# version 3.x
+# print("statement")
 
 '''
 Here we will look to create a frequency matrix on a smaller document set to make sure we understand how the
