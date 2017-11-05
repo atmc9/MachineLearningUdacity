@@ -272,3 +272,10 @@ Ensemble learning - Boosting
     - Agnostic of learner
 
   Additional notes on boosting: https://storage.googleapis.com/supplemental_media/udacityu/367378584/Intro%20to%20Boosting.pdf
+
+
+
+Unsupervised Learning: Learning the system based on unlabeled data
+Example: Clustering, Dimensionality Reduction
+    Based on patterns of common symptoms Unsupervised learning can find diseases that we did not know they exist.
+ 
