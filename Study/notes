@@ -278,4 +278,95 @@ Ensemble learning - Boosting
 Unsupervised Learning: Learning the system based on unlabeled data
 Example: Clustering, Dimensionality Reduction
     Based on patterns of common symptoms Unsupervised learning can find diseases that we did not know they exist.
- 
+
+ 1) K-means clustering: Initialize the centers at random place
+        1) Assign the points that are closer to the centers
+        2) Optimize: move the centers so that the assignments will have better average distance
+        Repeat this process
+
+ Pros and Cons:  Local minimum is be a problem in the K-Means, that is why it is always better to run this algorithm multiple
+ times using n_init variable in SK-Learn and get an average.
+      For a fixed data set and for fixed number of initial centroids, K-Means does not give the same answer.
+      The placement of initial centroids maters a lot. (K-Means is type of Hill climbing algorithms)
+
+2) Single Linkage Clustering:
+      Just make every point as a cluster and start merging based on the inter-cluster distance.
+      inter-cluster distance is distance between closest(others algorithms uses average, median) points in two clusters.
+      This gives the hierarchal agglomerative structure
+      Pros: Terminates fast
+
+
+Soft Clustering:
+      If we have a point that does not belong to 2 clusters, Like if it is between 2 clusters then that point can be shared.
+   Maximum Likelihood:
+    <X, Z1, Z2, ...., Zk>  hidden variables
+3) Expectation Maximization:  Soft clustering idea, it goes under finding the probability assignments, moving centers.
+      Mostly Gaussian distribution is used.
+      Expectation: probability of late variables (Expensive - involves probabilistic inference)
+      Maximization: Use those variables to estimate parameters.
+     Pros: Monotonically non-decreasing likelihood, does not diverge, Works with any kind of distribution
+     Cons: Does not converge (practically does, very rarely happens), Can get stuck(local optima problem)- random restart.
+
+     K-means vs EM's : K-means will stop after certain number iteration, where as EM's will have lot of probabilities to move.
+
+
+Desired properties of clustering algorithms:
+    Richness:  You can have any number of clusters as your solution, your algorithms should not fix the number of clusters.
+    Scale-Invariance:  Change of units does not matter, relative scaling.
+    Consistency:  Shrinking the intra cluster distances and increasing the inter cluster distances does not change the clustering.
+Impossible theorem: No algorithm can achieve all 3 (Richness, Scale-Invariance, consistency)
+
+Feature Scaling: Used for normalizing the feature values.
+      Algorithms that would effect by feature scaling are: SVM with RBF Kernel, K-Means Clustering
+
+Feature Selection:
+       -> Only a few matters (Interpretability & insight, Knowledge Discovery)
+       -> Curse of Dimensionality(If we have more features, we need exponential data)
+       -> This is an np-hard problem, exponential time
+    Filtering: Takes all features and gives the fewer features using searching algorithm. Fewer set is used by learning algorithm.
+            Information Gain, Variance, Entropy, Useful features, Independent/Non-Redundant
+           Pros: Fast as it is looking at Isolated features
+           Cons: Speed-> Isolated Features, some times you might want a features if we look in combination to other.
+                 Ignores the learner
+        Use inductive bias of Decision tress to choose features and use other algorithm like K-means(suffers from Curse of dimensionality,
+        it does not know which features are important) for actual model using selected features.
+    Wrapping: Searches Features over a subset of features asks learning algorithm to do model and give the score,
+            based on the score, it will update the new set of features.
+            Search: Hill Climbing, Randomized optimization,
+                  Forward - Select best1, keep the best1 and search for best2 that works well with best1, continue
+                  Backward - select all and find sub set combination that works well.
+           Pros: considers the learning bias (model bias)
+           Cons: Soo Slow
+    Useless VS relevance of a feature
+
+    Xi is strongly relevant if removing it degrades BOC-Bayes Optimal Classifier
+    Xi is weakly relevant if not strongly relevant, there exist a subset of features S such that adding Xi to S improve BOC
+    Other wise Xi is irrelevant
+    Relevance measures effect on the Bayes optimal classifier.
+    Relevance - Information about data
+    Usefulness - Error on Model/Learner
+
+PCA - Principle Component Analysis (correlation by maximizing the variance  => reconstruction)
+    Measurable vs Latent features:
+      Square footage, Num of rooms, School Ranking, Neighborhood safety
+      Size, Neighborhood
+Principle component of a dataset is the direction that has maximum variance(minimizes the information loss) when we project or compress down onto them.
+      More variance of data I have along PC, higher the PC ranked.
+  Example: Facial Recognition
+
+
+ Feature Transformation:(Linear Transformation)
+      Feature selection is subset of feature Transformation
+Example: Information Retrieval (ad hoc)  Give me related keyword documents
+      -> lots of words, good indicators, polysemy(false positives), synonymy(false negatives)
+
+Independent Component Analysis: Independence   (x1, x2, ....) => (y1, y2, ...) with I(yi, yj) =0 I(Y, x) is more means no much information loss
+     Blind source separation problem or cocktail party problem : 3 people talking(hidden layer) and recorded by 3 microphones.
+      directional
+
+Faces are inputed:
+      PCA -> Brightness, Average Face
+      ICA -> Nose, Eyes, Mouth etc
+
+RCA- RandomComponent Analysis:
+LDA - Linear Discriminant Analysis: Finds the projection that discriminates based on labels   
