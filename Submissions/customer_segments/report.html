@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11862,7 +11862,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -12005,7 +12005,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12162,7 +12162,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -12200,18 +12200,6 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>0.714456791906
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/anveshtummala/anaconda2/lib/python2.7/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
-  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -12259,7 +12247,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -14101,7 +14089,7 @@ RU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -18319,7 +18307,7 @@ IYQQQgihKfwP6O6gmWnW6dIAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -18426,7 +18414,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
@@ -19248,7 +19236,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li><p>I actually looked for the same logic to select the outliers[128, 154, 65, 66, 75] to be removed. If a data point is outliers for multiple feature, better to remove it as it will affect the model prediction as some of the algorithms gives more weightage to weak learners(our outliers will be give more weightage, we dont want to do that in this case, as we are only looking for generality of the data).</p>
+<li><p>I actually looked for the same logic to select the outliers[128, 154, 65, 66, 75] to be removed. If a data point is outliers for multiple feature, better to remove it as it will affect the model prediction as some of the algorithms gives more weightage to weak learners(our outliers will be give more weightage, we dont want to do that in this case, as we are only looking for generality of the data). The Clustering algorithms are sensitive to outliers as they give more weight as it tries to optimize the sum of square.</p>
 </li>
 <li><p>Yes, the outliers data points in more than one feature should be removed from the data set.</p>
 </li>
@@ -19284,7 +19272,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span> 
@@ -19655,7 +19643,7 @@ EJgAAABG/B90O6WwRLpVdQAAAABJRU5ErkJggg==
 <ul>
 <li>First and 2nd principle components together explain 70.85 percent of varience in data. </li>
 <li>First four principle components are explaining 93.11 percent of varience in data.</li>
-<li>The first dimension is a measure of not buying detergent papers(75% weightage) and not buying Milk and Grocery at(50% weightage) and 20% weightage of buying fresh and frozen food, this tells that the customer might be a market. The 2nd dimension is a measure of not buying Fresh(70%) and Frozen(55%) and Delicatessen(50%) products, which tells that the customer is not buying product that need huge refrigerators(could be Cafe). The 3rd dimension tells that the customer could be a deli owner as they are not buying fresh prodcuts(70%) and buying Delicatessen(60%) and frozen(40%) prodcuts. The 4th one is buying large Frozen(80%) and not buying Delicatessen(50%) which could be a frozen food storage.    </li>
+<li>The first dimension tells buying the detergent_papers(75% weightage) Milk and Grocery at(50% weightage) is inversly correlated with 20% weightage of buying fresh and frozen food, in other words if some customer is buying Fresh and frozen food, there is likely chance for not buying detergent_Papers, Milk, Grocery which makes perfect sense to think about a market that has more fresh and frozen food and does not have grocery, milk, detergent_paper products. The 2nd dimension tells that buying Fresh(70%) and Frozen(55%) and Delicatessen(50%) products are highly correlated, which tells that the customer is buying prodcuts that need refrigerators together. The 3rd dimension tells that buying fresh prodcuts(70%) has inverse correlation in buying Delicatessen(60%) and frozen(40%) prodcuts, like in delis they dont have much fresh products but they have delicatessen products. The 4th one is buying large Frozen(80%) and not buying Delicatessen(50%) which could be a frozen food storage.    </li>
 </ul>
 
 </div>
@@ -19672,7 +19660,7 @@ EJgAAABG/B90O6WwRLpVdQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -19776,7 +19764,7 @@ EJgAAABG/B90O6WwRLpVdQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
@@ -19810,7 +19798,7 @@ EJgAAABG/B90O6WwRLpVdQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -19893,7 +19881,7 @@ EJgAAABG/B90O6WwRLpVdQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -19910,13 +19898,13 @@ EJgAAABG/B90O6WwRLpVdQAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a1b4c4f90&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a11436ed0&gt;</pre>
 </div>
 
 </div>
@@ -21062,7 +21050,7 @@ EzoiIiIiIiIfxYSOiIiIiIjIRzGhIyIiIiIi8lFM6IiIiIiIiHwUEzoiIiIiIiIf9f/N07SVyeOA
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
@@ -21150,7 +21138,7 @@ EzoiIiIiIiIfxYSOiIiIiIjIRzGhIyIiIiIi8lFM6IiIiIiIiHwUEzoiIiIiIiIf9f/N07SVyeOA
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -21822,7 +21810,7 @@ YII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
@@ -21949,7 +21937,7 @@ YII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -22032,6 +22020,7 @@ Sample point 2 predicted to be in Cluster 0
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
+<p>A/B testing on the delivary change: For doing A/B testing if we provide half of the customers from a customer segment -1(restaurents/cafes -as they are having high chance of liking), with 3 day delivary and other half with 5 day delivary. If we see the client is ok with 3 day delivery we can continue, if not we can provide 5 day delivery and consider that data point to train our data better - this could also be an outlier, if it is we will ignore it. If we see more testing score. This test will be good if you want to provide either of services based on customer choice. But if we only want to provide just one service, then do this test to all customers with 50 % traffic have option of 3 day delivary and rest will get 5 day delivary. From te test result you can specifically see which one will be good service to provide. As per the given problem, it is good to provide the clients with segment-1 for 3 day delivery as we can see less resistance from them, so it is idel to do A/B test on that customer segment and will most probably see good results on 3 day shift being ok for that group. Note we pick the traffic to our test only from the same segment as A/B test need structured data.</p>
 <p>From the segments we obtained from clustering, the segment-0 (markets) that has high purchase of Frozen, Fresh products will get more negatively effected as they want the prodcuts daily to be fresh vegetables, fruits, etc where as the segment-1 (cafes) that purchase more grocery, Detergent_paper, Milk products might not get much effected with 3 day delivery as they are not much dependent on fresh products that can get spoiled if they keep longer, so segment-1 will react positively to the change.</p>
 
 </div>
@@ -22072,7 +22061,7 @@ After the clustering segments are found, we can train a supervised learning algo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
