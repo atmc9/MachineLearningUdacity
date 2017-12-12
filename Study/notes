@@ -369,4 +369,80 @@ Faces are inputed:
       ICA -> Nose, Eyes, Mouth etc
 
 RCA- RandomComponent Analysis:
-LDA - Linear Discriminant Analysis: Finds the projection that discriminates based on labels   
+LDA - Linear Discriminant Analysis: Finds the projection that discriminates based on labels
+
+
+
+
+
+Reinforcement Learning(decision making):
+In this we attach reward and punishments to different outcomes, by weighting these reward and
+punishments, we can teach the right level of priority to assign different goals. Augmenting these reward and punishments will help.
+
+  -> mark of decision processes
+  -> game theory and multi agent interactions
+In supervised learning we have function approximation, unsupervised has clustering or description,
+reinforcement learning  y = f(x) given x, z
+
+Markav's Decision process: (MDP)  Bellmen equation
+        State,
+        action,
+        model(describes the rules, probability of going to other state from current state by taking the action)
+                model is the physics of the world
+        reward: positive points if we reach goals, or negative points if we do mistakes,
+
+        Rewards tell moment to moments vs (value functions)utilities tells the  long term rewards.
+
+Solution:   Policy -> pi(S) -> a
+            What action to take for any state we came across
+
+Markovian property: only present matters, things are stationary(rules don't change)
+   picking the rewards matter a lot. Rewards are our domain knowledge.
+    The path we choose depends on the reward scale and the time you got before you end.
+
+Stationarity of preferences:  Look math in video
+       Discounted -> geometric
+       infinite -> finite
+       Delayed rewards are long term utility
+Start with arbitrary utilities(value functions), update utilities based on neighbors
+
+Examples of planner are -
+    Value iteration: Get utility iteration  :  https://www.youtube.com/watch?v=doxTNCH7oHc
+    Policy iteration
+
+Note: 3 Approaches to do RL :  https://www.youtube.com/watch?time_continue=46&v=bFPoHrAoPoQ
+     Policy Search, Value-function based,
+Q-learning: is family of algorithms, what to use for Q cap selection,
+
+Game Theory:
+
+2-player, zero-sum deterministic game of perfect information - minMax solution of matrix
+  for non-deterministic - still minmax works well
+
+  but for deterministic game of hidden information - minmax = maxmin does not hold well
+
+Prisoner dilemma:
+
+Stochastic Games:   MDP:RL :: StochasticGames:MultiAgentRL
+
+Zero-sum Stochastic Games:
+     we got minmax-Q function
+     Value iteration works,
+     minMax-Q Converges,
+     Unique solution,
+     Policies for the 2 players can be computed independently
+     Update efficiently the equation
+
+General-sum Stochastic Games:   almost NP problem
+    Nash Equilibrium instead of minMax
+    Value iteration does not works,
+    Nash-Q does not Converge,
+    No Unique solution to Q*,
+    Policies cannot be computed independently
+    Update is not efficient
+
+Other ideas:
+    Repeated stochastic games
+    Cheap talk -> correlated equilibrium
+    Cognitive Hierarchy -> best responses
+    Side payments (coco values) cooperative competitive values
