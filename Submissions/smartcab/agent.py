@@ -42,7 +42,8 @@ class LearningAgent(Agent):
 
         # self.epsilon -= 0.05 # linear
         self.training_no += 1
-        self.epsilon = math.exp(-0.05*self.training_no) # exponential
+        self.epsilon = math.exp(-0.007*self.training_no) # exponential
+        self.alpha = math.exp(-0.01*self.training_no) # exponential
         if testing:
             self.epsilon = self.alpha = 0
 
@@ -60,17 +61,7 @@ class LearningAgent(Agent):
 
         # Set 'state' as a tuple of relevant data for the agent
 
-        # If a car coming from left, all we care about is if that goes forward or not.
-        # On stop, if we have to take right, we have to look for the car on left is coming forward.
-        leftCarSignal = 'forward' if inputs['left'] == 'forward' else 'not_forward'
-
-        oncomingCarSignal = 'none'
-        if inputs['oncoming'] == 'forward':
-            oncomingCarSignal = 'forward'
-        elif inputs['oncoming'] == 'left':
-            oncomingCarSignal = 'left'
-
-        state = (waypoint, inputs['light'], leftCarSignal, oncomingCarSignal)
+        state = (waypoint, inputs['light'], inputs['left'], inputs['oncoming'])
 
         return state
 
@@ -187,7 +178,7 @@ def run():
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env, update_delay=0.1, display=True, log_metrics=True, optimized=True)
+    sim = Simulator(env, update_delay=0.0, display=False, log_metrics=True, optimized=True)
 
     ##############
     # Run the simulator
