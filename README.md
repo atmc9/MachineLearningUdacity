@@ -2,7 +2,7 @@
 Udacity Machine Learning Course study
 
 | Problem        | ML category      | TypeofProblem  | Goals |
-| ------------- |:-------------:| |:-------------:| -----:|
+| ------------- |:-------------:| :-------------:| -----:|
 | titanic_survival_exploration    | Introduction- Simple rule based | Binary Classfication | getting started |
 | Predicting Boston Housing Prices    | Supervised Learning | Regression | Learning Curves, ModelComplexity Graphs, Grid Search, Cross Validation |
 | Finding Donors for CharityML | Supervised Learning | Binary Classfication | Data Exploration, 
