@@ -446,3 +446,48 @@ Other ideas:
     Cheap talk -> correlated equilibrium
     Cognitive Hierarchy -> best responses
     Side payments (coco values) cooperative competitive values
+
+
+
+
+
+
+  Deep Neural Networks:
+
+    Neural network general formula: w1 * x1 + w2 * x2 + b = 0   or (W * X + b = 0) where W = (w1, w2,..) and X = (x1, x2, ..)
+
+   Perceptron: https://www.youtube.com/watch?v=hImSxZyRiOw
+        takes the inputs x1, x2, ... xn multiplied by weights and it can take 1 as input and  multiply it with bias
+           w1 x1 + w2 x2 + .... + 1 * b  and our we can have node that sums the values and other node that is a step
+           function checks if input is positive and returns 1. We can have bias either coming as input or value inside the node.
+
+        Note: These perceptrons can be seen as a combination of nodes. Just takes the inputs and returns either 0 or 1.
+  Perceptron trick: If we have 2 types of points and if we draw a random line, for the wrongly separated points we need to move the line closer to those points.
+  https://www.youtube.com/watch?v=jfKShxGAbok
+
+  To use the gradient descent our error function need to be continuous, i.e error function need to be differentiable.
+
+  Error function: Instead of using the step function, if we can use sigmoid function (1/ 1+ e^-x), we can use the gradient decent
+  Softmax method: To get the probability of occurrence of a multi-labeled class is done using the exponential average of its scores.
+  One-hot encoding: For any input of no-numbers, we need to turn then into numbers by having one variable for each of classes.
+  Maximum likelihood model: If we have 2 models, the best model is the one that gives more probabilities to the event that happen to us.
+  Cross-entropy: Instead of multiplying the probabilities of the points, if we take a negative log of all vales, it represents the cross-entropy.
+       For a better model, the -log(0.9) -log(0.99) = very less value compared to the bad model with high cross-entropy value.
+       Maximizing the entropy to minimizing the cross-entropy
+  Logistic regression: the error function for the binary classification is
+      Error function E(W,b) = -1/ m Sum_i_1_to_m ((1-yi)(ln(1-y_predi)) - yi * ln(y_predi)    where y_predi = sigma (W* xi + b)
+  Gradient Descent: https://classroom.udacity.com/nanodegrees/nd009/parts/99115afc-e849-48cf-a580-cb22eea2ba1b/modules/777db663-2b0d-4040-9ae4-bf8c6ab8f157/lessons/21d39927-8e4f-44ba-8425-d15889ac19e2/concepts/ca6eff40-a3e2-4d53-85f4-d2454b538d87
+
+  Similarities between perceptron algorithm and Gradient descent algorithm:
+  In gradient descent, the misclassified points tells to come closer vs correctly classified points tells to go away.
+
+  Don't forget the sigmoid function in the neural network after adding the weighted sum of inputs and bias values.
+
+Early stopping: It is used to stop at the best epoch level for a given problem by stoping at the first increasing point
+in the model complexity graph.
+
+The gradient at each node is the product of derivatives at each node in the path to output. So we will be getting very tiny gradient decent values.
+Th fix is to get more bigger momentum changes: by using tanh function and relu function(used for continuous values)
+
+Gradient descent does not help if we have local minimum in the way to globally optimum solution.
+Solution: Random restarts, momentum(move with speed of last few steps we made) 
