@@ -1,6 +1,4 @@
-
-
-Machine Learning: Teaching computers to perform tasks from past experience(data).
+**Machine Learning**: Teaching computers to perform tasks from past experience(data).
        Voice recognition, spam detection, fraud detection, stock market, self driving cars.
 
 Navie Bayes: Based on the probability of  success in the existing data, we can predict the new data.
@@ -490,4 +488,4 @@ The gradient at each node is the product of derivatives at each node in the path
 Th fix is to get more bigger momentum changes: by using tanh function and relu function(used for continuous values)
 
 Gradient descent does not help if we have local minimum in the way to globally optimum solution.
-Solution: Random restarts, momentum(move with speed of last few steps we made) 
+Solution: Random restarts, momentum(move with speed of last few steps we made)

@@ -1,0 +1,15 @@
+Example Machine Learning Capstone Reports
+Included in the project files for the Capstone are three example reports that were written by students just like yourselves. Because the written report for your project will be how you are evaluated, it is absolutely critical that you are producing a clear, detailed, well-written report that adequately reflects the work that you've completed for your Capstone. Following along with the Capstone Guidelines will be very helpful as you begin writing your report.
+
+Our first example report: https://github.com/udacity/machine-learning/blob/master/projects/capstone/report-example-1.pdf
+ comes from graduate Martin Bede, whose project design in the field of computer vision, named "Second Sight", was to create an Android application that would extract text from the device's camera and read it aloud. Martin's project cites the growing concern of vision loss as motivation for developing software that can aid those unable to see or read certain print.
+
+Our second example report: https://github.com/udacity/machine-learning/blob/master/projects/capstone/report-example-2.pdf
+ comes from an anonymous graduate whose project design in the field of image recognition was to implement a Convolutional Neural Network (CNN) to train on the Cifar-10 dataset and successfully identify different objects in new images. This student describes with thorough detail how a CNN can be used quite effectively as a descriptor-learning image recognition algorithm.
+https://www.cs.toronto.edu/~kriz/cifar.html
+
+Our third example report: https://github.com/udacity/machine-learning/blob/master/projects/capstone/report-example-3.pdf
+ comes from graduate Naoki Shibuya, who took advantage of the pre-curated robot motion planning "Plot and Navigate a Virtual Maze" project. Pay special attention to the emphasis Naoki places on discussing the methodology and results: Projects relying on technical implementations require valuable observations and visualizations of how the solution performs under various circumstances and constraints.
+https://docs.google.com/document/d/1ZFCH6jS3A5At7_v5IUM5OpAXJYiutFuSIjTzV_E-vdE/pub
+
+Each example report given has many desirable qualities we expect from students when completing the Machine Learning Capstone project. Once you begin writing your project report for which ever problem domain you choose, be sure to reference these examples whenever necessary!

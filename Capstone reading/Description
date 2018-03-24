@@ -1,0 +1,16 @@
+Capstone Description
+Think about a technical field or domain that you are passionate about, such as robotics, virtual reality, finance, natural language processing, or even artificial intelligence (the possibilities are endless!). Then, choose an existing problem within that domain that you are interested in which you could solve by applying machine learning algorithms and techniques. Be sure that you have collected all of the resources needed (such as data sets) to complete this project, and make the appropriate citations wherever necessary in your report. Below are a few suggested problem areas you could explore if you are unsure what your passion is:
+
+Robot Motion Planning : https://docs.google.com/document/d/1ZFCH6jS3A5At7_v5IUM5OpAXJYiutFuSIjTzV_E-vdE/pub
+Healthcare: https://docs.google.com/document/d/1WzurKKa9AX2DnOH7KiB38mvozdOSemfkGpex8hdTy8c/pub
+Computer Vision: https://docs.google.com/document/d/1y-XfjkPFgUQxFIQ9bBncUSjs4HOf5E-45FrLYNBsZb4/pub
+Education: https://docs.google.com/document/d/1vjerjRQnWs1kLbZagDYT6rNqiwAG23Yj45oUY88IAxI/pub
+Investment and Trading: https://docs.google.com/document/d/1ycGeb1QYKATG6jvz74SAMqxrlek9Ed4RYrzWNhWS-0Q/pub
+
+In addition, you may find a technical domain (along with the problem and dataset) as competitions on platforms such as Kaggle, or Devpost. This can be helpful for discovering a particular problem you may be interested in solving as an alternative to the suggested problem areas above. In many cases, some of the requirements for the capstone project are already defined for you when choosing from these platforms.
+
+For whichever application area or problem you ultimately investigate, there are five major stages to this capstone project which you will move through and subsequently document. Each stage plays a significant role in the development life cycle of beginning with a problem definition and finishing with a polished, working solution. As you make your way through developing your project, be sure that you are also working on a rough draft of your project report, as it is the most important aspect to your submission!
+
+To determine whether your project and the problem you want to solve fits Udacity's vision of a Machine Learning Capstone Project , please refer to the capstone project rubric and make a note of each rubric criteria you will be evaluated on. A satisfactory project will have a report that encompasses each stage and component of the rubric.
+
+https://review.udacity.com/#!/rubrics/108/view
