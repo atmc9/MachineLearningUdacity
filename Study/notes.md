@@ -1,15 +1,15 @@
 **Machine Learning**: Teaching computers to perform tasks from past experience(data).
        Voice recognition, spam detection, fraud detection, stock market, self driving cars.
 
-1. Navie Bayes: Based on the probability of success in the existing data, we can predict the new data.
-2. Gradient Descent: What is the better way to move our prediction line to reduce the error.
-3. Linear regression - best line through the points
-4. Logistic regression - minimize the sum of Error function for wrongly classified data
-5. Super vector Machines - place the line that increases the minimum distance of points to the line.
-6. Neural Network: It is dividing the data into regions. Network of the decision chain.
-7. Kernel Method: dividing with a plane or coming up with a curve
-8. K-Mean clustering: Place the ClusterCenters randomly and find the distance to their closest points, move the Centers to have the less distance and follow the step to include the new points that are close to other centers and repeat it.
-9. Hierarchal Clustering: Here the distance of how far we  can go to include in a cluster, determines the number of clusters.
+1. **Navie Bayes**: Based on the probability of success in the existing data, we can predict the new data.
+2. **Gradient Descent**: What is the better way to move our prediction line to reduce the error.
+3. **Linear regression**: best line through the points
+4. **Logistic regression**: finds the best classification line by minimizing the sum of Error function for wrongly classified data - used for classification problems
+5. **Super vector Machines**: place the line that increases the minimum distance of points to the line. The points close to the boundary are called support as they mater more for calculating the minimum distance to all points.
+6. **Neural Network**: It is dividing the data into regions. Network of the decision chain.
+7. **Kernel Method**: dividing with a plane or coming up with a curve. Move the points based on new dimension.
+8. **K-Mean clustering**: Place the Cluster Centers randomly and find the distance to their closest points, move the Centers to have the less distance and follow the step to include the new points that are close to other centers and repeat it.
+9. **Hierarchal Clustering**: Here the distance of how far we  can go to include in a cluster, determines the number of clusters.
 
 
 
